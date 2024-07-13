@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
              
               foregroundColor: constants.white),
           scaffoldBackgroundColor: constants.backgroundColor,
-          textTheme: TextTheme(bodyMedium: TextStyle(color: constants.white))),
+          textTheme: const TextTheme(bodyMedium: TextStyle(color: constants.white))),
       debugShowCheckedModeBanner: false,
-      home: signinwrapper(),
+      home: const signinwrapper(),
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 class MyDashChat {
   MessageOptions myMessageOptions() {
     return MessageOptions(
+      borderRadius:10 ,
       showOtherUsersAvatar: true,
       showOtherUsersName: true,
       containerColor: Colors.white,

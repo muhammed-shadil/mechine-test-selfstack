@@ -41,7 +41,7 @@ class SigninScreen extends StatelessWidget {
                   .showSnackBar(SnackBar(content: Text(state.message)));
             } else if (state is Authenticated) {
               ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text("login successfully")));
+                  .showSnackBar(const SnackBar(content: Text("login successfully")));
 
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) =>  HomeScreenwrapper()));
@@ -51,7 +51,7 @@ class SigninScreen extends StatelessWidget {
             child: Container(
               decoration:
                   BoxDecoration(border: Border.all(color: Colors.white),borderRadius: BorderRadius.circular(10)),
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               width: MediaQuery.of(context).size.width * 0.28,
               height: MediaQuery.of(context).size.height * 0.68,
               child: SingleChildScrollView(

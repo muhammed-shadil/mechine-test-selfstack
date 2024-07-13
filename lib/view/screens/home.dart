@@ -19,7 +19,7 @@ class HomeScreenwrapper extends StatelessWidget {
 
   WebSocketChannel connectToServer() {
     final wsUrl = Uri.parse(
-        'wss://echo.websocket.org/.ws'); // Replace with your server URL
+        'wss://echo.websocket.org/.ws'); 
     return WebSocketChannel.connect(wsUrl);
   }
 }
@@ -39,13 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    final WebSocketChannel channel = BlocProvider.of<ChatBloc>(context)
-        .socketChannel; // Access channel from ChatBloc
+    final WebSocketChannel channel =
+        BlocProvider.of<ChatBloc>(context).socketChannel;
 
     channel.stream.listen((message) {
-      // Handle incoming messages from server (e.g., echo replay)
-      print("${message.toString()}podammmmmmmaa");
-
       BlocProvider.of<ChatBloc>(context).add(ReceiveMessage(message: message));
     });
   }
@@ -58,8 +55,13 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Server bot",style: TextStyle(fontSize: 25),),
-            Container(margin: EdgeInsets.all(10),padding: EdgeInsets.all(10),
+            const Text(
+              "Server bot",
+              style: TextStyle(fontSize: 25),
+            ),
+            Container(
+              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               width: MediaQuery.of(context).size.width * 0.5,
               height: MediaQuery.of(context).size.height * 0.7,
               decoration: BoxDecoration(
@@ -71,12 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (state is SuccessSend) {
                     allMessages = state.list;
                   } else if (state is Receivemessage) {
-                    allMessages=state.list;
-                    
-                    // Update allMessages list to include received messages
-                   // Extract message content from ReceiveMessage
-                  // Identify server messages
-                    
+                    allMessages = state.list;
                   } else if (state is senderror) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
@@ -84,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     );
                   }
-                 
+
                   return DashChat(
                     messageOptions: myDashChat.myMessageOptions(),
                     messageListOptions: myDashChat.myMessageListOptions(),
