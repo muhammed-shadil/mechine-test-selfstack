@@ -18,9 +18,11 @@ class SuccessSend extends ChatState {
 
 
  }
- class Receivemessage extends ChatState{
-  final String message;
+class Receivemessage extends ChatState {
+ List<ChatMessage> list;
+  Receivemessage({
+    required this.list,
+  });
 
-  Receivemessage({required this.message});
 
  }

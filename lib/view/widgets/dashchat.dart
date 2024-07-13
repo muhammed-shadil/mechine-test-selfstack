@@ -8,10 +8,10 @@ class MyDashChat {
       showOtherUsersAvatar: true,
       showOtherUsersName: true,
       containerColor: Colors.white,
-      currentUserContainerColor: Color.fromARGB(255, 131, 129, 129),
+      currentUserContainerColor: Color.fromARGB(255, 236, 232, 184),
       currentUserTextColor: const Color.fromARGB(255, 50, 49, 49),
       textColor: const Color.fromARGB(255, 63, 59, 59),
-      timeFontSize: 8,
+      timeFontSize: 10,
       showTime: true,
       timeFormat: DateFormat('hh:mm a'),
     );

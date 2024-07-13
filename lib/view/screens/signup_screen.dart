@@ -1,11 +1,11 @@
-import 'package:chat_server_mechine_test/constants.dart';
+import 'package:chat_server_mechine_test/utils/constants.dart';
 import 'package:chat_server_mechine_test/controller/bloc/auth_bloc/authentication_bloc.dart';
 import 'package:chat_server_mechine_test/controller/bloc/auth_bloc/authentication_event.dart';
 import 'package:chat_server_mechine_test/controller/bloc/auth_bloc/authentication_state.dart';
-import 'package:chat_server_mechine_test/home.dart';
-import 'package:chat_server_mechine_test/login_screen.dart';
-import 'package:chat_server_mechine_test/mainbutton.dart';
-import 'package:chat_server_mechine_test/maintextfield.dart';
+import 'package:chat_server_mechine_test/view/screens/home.dart';
+import 'package:chat_server_mechine_test/view/screens/login_screen.dart';
+import 'package:chat_server_mechine_test/view/widgets/mainbutton.dart';
+import 'package:chat_server_mechine_test/view/widgets/maintextfield.dart';
 import 'package:chat_server_mechine_test/model/usermodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

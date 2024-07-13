@@ -1,4 +1,4 @@
-import 'package:chat_server_mechine_test/constants.dart';
+import 'package:chat_server_mechine_test/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
